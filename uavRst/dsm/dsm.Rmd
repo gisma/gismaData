@@ -20,7 +20,7 @@ In the end of the processing chain you will have an orthorectified image and a d
 First we have to set up the project. This is obviously more than usually due to the fact that a bunch of software needs to be linked against R.
 
 
-```{r prep,error=FALSE, warning=FALSE}
+```{r prep, message=FALSE,error=FALSE, warning=FALSE}
 require(uavRst)
 require(raster)
 require(mapview)
@@ -59,7 +59,7 @@ raster::plot(dsm1[[1]],col = pal(100), main ="0.02m  DSM")
 0.25 meter resolution without filtering.
 
 
-``` {r dsm2,error=FALSE, warning=FALSE}
+``` {r dsm2,error=FALSE, warning=FALSE,message=FALSE}
 
 dsm2 <- uavRst::pc2dsm(lasDir = "lasdata.las",
                       gisdbase_path = projRootDir,
@@ -76,7 +76,7 @@ raster::plot(dsm2[[1]],col = pal(100), main ="0.25m  DSM")
 
 we want to have a coarser and smoother result, so we can change the filter and resolution options.
 
-```{r dsm3 , error=FALSE, warning=FALSE}
+```{r dsm3 , error=FALSE, warning=FALSE,message=FALSE}
 
 dsm3 <- uavRst::pc2dsm(lasDir = "lasdata.las",
                       gisdbase_path = projRootDir,

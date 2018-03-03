@@ -15,25 +15,9 @@ First we have to set up the project. This is obviously more than usually due to 
 
 ``` r
 require(uavRst)
-```
-
-    ## Loading required package: uavRst
-
-``` r
 require(raster)
-```
-
-    ## Loading required package: raster
-
-    ## Loading required package: sp
-
-``` r
 require(mapview)
-```
 
-    ## Loading required package: mapview
-
-``` r
 # proj subfolders
 projRootDir<-setwd(tempdir())
 paths<-link2GI::initProj(projRootDir = projRootDir,
